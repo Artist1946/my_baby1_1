@@ -1,0 +1,125 @@
+body {
+    background: #101010;
+    color: #fff;
+    font-family: Cairo, Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bg_heart {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    width: 90%;
+    max-width: 420px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px #0008;
+}
+
+.square-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #fff;
+    box-shadow: 0 0 15px rgba(255, 80, 140, .9), 0 0 30px rgba(255, 80, 140, .6);
+    animation: popGlow 1.6s infinite ease-in-out;
+}
+
+@keyframes popGlow {
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+#question-text {
+    margin-top: 20px;
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+.buttons-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.action-button {
+    padding: 12px;
+    font-size: 16px;
+    background: #ff3b6f;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.action-button:hover {
+    background: #ff6690;
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* فيديو */
+
+.video-container {
+    display: flex;
+    justify-content: center;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 80, 140, .7);
+}
+
+
+/* قلوب */
+
+.floating-heart {
+    position: absolute;
+    top: -20px;
+    transform: rotate(-45deg);
+}
+
+.floating-heart:before,
+.floating-heart:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: 50%;
+}
+
+.floating-heart:before {
+    top: -50%;
+}
+
+.floating-heart:after {
+    right: -50%;
+}
+
+@keyframes love {
+    0% {
+        top: 110%;
+    }
+}
