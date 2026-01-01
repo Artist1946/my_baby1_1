@@ -5,14 +5,15 @@ const mainImage = document.getElementById("mainImage");
 
 /* الصور */
 const stepImages = {
-    '1': "images/img1.jpg",
-    '2': "images/2.jpg",
-    '2_1': "images/4.jpg",
-    '3': "images/3.jpg",
-    'end_wait': "images/sad.jpg",
-    'end_surprise': "images/sad.jpg",
-    'end_love': "images/love.jpg"
+    '1': "1.jpg",
+    '2': "3.jpg",
+    '2_1': "4.jpg",
+    '3': "3.jpg",
+    'end_wait': "زعلان.jpg",
+    'end_surprise': "زعلان.jpg",
+    'end_love': "شعار موقع.png"
 };
+
 
 /* الأسئلة */
 const questions = {
@@ -151,3 +152,4 @@ setInterval(() => {
         </div>
     `);
 }, 400);
+
