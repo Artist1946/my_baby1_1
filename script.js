@@ -5,7 +5,7 @@ const mainImage = document.getElementById("mainImage");
 
 const stepImages = {
     '1': "؟.jpg",
-    '2': "1.jpg",
+    '2': "4.jpg",
     '2_1': "2.jpg",
     '3': "3.jpg",
     'end_wait': "زعلان.jpg",
@@ -114,6 +114,7 @@ setInterval(() => {
         </div>
     `);
 }, 400);
+
 
 
 
