@@ -4,7 +4,7 @@ const finalMessage = document.getElementById("final-message");
 const mainImage = document.getElementById("mainImage");
 
 const stepImages = {
-    '1': "?.jpg",
+    '1': "1.jpg",
     '2': "1.jpg",
     '2_1': "2.jpg",
     '3': "3.jpg",
@@ -114,5 +114,6 @@ setInterval(() => {
         </div>
     `);
 }, 400);
+
 
 
