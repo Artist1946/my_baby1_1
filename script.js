@@ -4,12 +4,12 @@ const finalMessage = document.getElementById("final-message");
 const mainImage = document.getElementById("mainImage");
 
 const stepImages = {
-    '1': "؟.jpg",
-    '2': "4.jpg",
-    '2_1': "2.jpg",
+    '1': "1.jpg",
+    '2': "1.jpg",
+    '2_1': "4.jpg",
     '3': "3.jpg",
     'end_wait': "زعلان.jpg",
-    'end_surprise': "images/sad.jpg",
+    'end_surprise': "5.jpg",
     'end_love': "زعلان.jpg"
 };
 
@@ -114,6 +114,7 @@ setInterval(() => {
         </div>
     `);
 }, 400);
+
 
 
 
