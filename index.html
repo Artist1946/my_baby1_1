@@ -1,53 +1,39 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- تحسين ظهور الموقع عند المشاركة -->
+
     <meta property="og:title" content="الى وليف روحي">
     <meta property="og:description" content="عُمرييي">
-    <meta property="og:image" content="https://example.com/path-to-image.jpg">
+    <meta property="og:image" content="images/share.jpg">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://example.com">
 
-    <script>
-        const titleText = "⋆.˚🦋༘⋆";
-        let index = 0;
+    <title>⋆.˚🦋༘⋆</title>
 
-        function animateTitle() {
-            document.title = titleText.slice(0, index);
-            index++;
-            if (index > titleText.length) index = 0;
-            setTimeout(animateTitle, 200);
-        }
-        animateTitle();
-    </script>
-
-    <link rel="icon" href="Photos/شعار موقع.png">
+    <link rel="icon" href="images/logo.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="bg_heart"></div>
+<div class="bg_heart"></div>
 
-    <div class="container">
-        <div class="image-placeholder">
-            <img id="mainImage" src="images/img1.jpg" class="square-image">
-        </div>
-
-        <div class="content-box">
-            <h2 id="question-text"></h2>
-            <div class="buttons-container" id="buttons-container"></div>
-            <div id="final-message" class="hidden"></div>
-        </div>
+<div class="container">
+    <div class="image-placeholder">
+        <img id="mainImage" src="images/question.jpg" class="square-image">
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="script.js"></script>
+    <div class="content-box">
+        <h2 id="question-text"></h2>
+        <div id="buttons-container" class="buttons-container"></div>
+        <div id="final-message" class="hidden"></div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="script.js"></script>
 
 </body>
-
-
 </html>
+
