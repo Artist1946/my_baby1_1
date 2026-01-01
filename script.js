@@ -4,7 +4,7 @@ const finalMessage = document.getElementById("final-message");
 const mainImage = document.getElementById("mainImage");
 
 const stepImages = {
-    '1': "1.jpg",
+    '1': "؟.jpg",
     '2': "1.jpg",
     '2_1': "2.jpg",
     '3': "3.jpg",
@@ -49,7 +49,7 @@ const questions = {
         text: `
         <div class="video-container">
             <video controls autoplay muted>
-                <source src="vid.mp4" type="video/mp4">
+                <source src="vid.mp4" type="vid/mp4">
             </video>
         </div>`,
         buttons: []
@@ -114,6 +114,7 @@ setInterval(() => {
         </div>
     `);
 }, 400);
+
 
 
 
