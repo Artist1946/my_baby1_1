@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(255,255,255,.12);
     backdrop-filter: blur(10px);
     padding: 25px;
     width: 90%;
@@ -33,20 +33,11 @@ body {
     object-fit: cover;
     border-radius: 12px;
     border: 3px solid #fff;
-    box-shadow: 0 0 15px rgba(255, 80, 140, .9), 0 0 30px rgba(255, 80, 140, .6);
     animation: popGlow 1.6s infinite ease-in-out;
 }
 
 @keyframes popGlow {
-    50% {
-        transform: scale(1.08);
-    }
-}
-
-#question-text {
-    margin-top: 20px;
-    font-size: 22px;
-    line-height: 1.6;
+    50% { transform: scale(1.08); }
 }
 
 .buttons-container {
@@ -64,7 +55,6 @@ body {
     border: none;
     border-radius: 12px;
     cursor: pointer;
-    transition: .3s;
 }
 
 .action-button:hover {
@@ -76,32 +66,21 @@ body {
     display: none;
 }
 
-
 /* فيديو */
-
-.video-container {
-    display: flex;
-    justify-content: center;
-}
-
 .video-container video {
     width: 100%;
-    max-width: 380px;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 80, 140, .7);
 }
 
-
 /* قلوب */
-
 .floating-heart {
     position: absolute;
-    top: -20px;
+    bottom: -20px;
     transform: rotate(-45deg);
 }
 
-.floating-heart:before,
-.floating-heart:after {
+.floating-heart::before,
+.floating-heart::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -110,16 +89,16 @@ body {
     border-radius: 50%;
 }
 
-.floating-heart:before {
-    top: -50%;
-}
-
-.floating-heart:after {
-    right: -50%;
-}
+.floating-heart::before { top: -50%; }
+.floating-heart::after { right: -50%; }
 
 @keyframes love {
     0% {
-        top: 110%;
+        bottom: -20px;
+        opacity: 1;
+    }
+    100% {
+        bottom: 110%;
+        opacity: 0;
     }
 }
