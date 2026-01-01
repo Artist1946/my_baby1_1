@@ -1,14 +1,15 @@
+/* إعداد عام */
+
 body {
     background: #101010;
     color: #fff;
     font-family: Cairo, Arial, sans-serif;
     margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
 }
+
+
+/* خلفية قلوب */
 
 .bg_heart {
     position: fixed;
@@ -17,28 +18,47 @@ body {
     overflow: hidden;
 }
 
+
+/* حركة القلب */
+
+@keyframes heartbeat {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+
+/* صندوق المحتوى */
+
 .container {
-    background: rgba(255,255,255,.12);
+    background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(10px);
     padding: 25px;
     width: 90%;
     max-width: 420px;
+    margin: 15px auto;
     border-radius: 20px;
     box-shadow: 0 0 25px #0008;
 }
 
-.square-image {
-    width: 150px;
-    height: 150px;
+
+/* الصورة */
+
+.circle-image {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
     object-fit: cover;
-    border-radius: 12px;
     border: 3px solid #fff;
-    animation: popGlow 1.6s infinite ease-in-out;
+    transition: 0.4s;
 }
 
-@keyframes popGlow {
-    50% { transform: scale(1.08); }
-}
+
+/* أزرار */
 
 .buttons-container {
     margin-top: 20px;
@@ -51,36 +71,33 @@ body {
     padding: 12px;
     font-size: 16px;
     background: #ff3b6f;
-    color: #fff;
+    color: white;
     border: none;
     border-radius: 12px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .action-button:hover {
     background: #ff6690;
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
 .hidden {
     display: none;
 }
 
-/* فيديو */
-.video-container video {
-    width: 100%;
-    border-radius: 15px;
-}
 
-/* قلوب */
+/* قلوب الخلفية */
+
 .floating-heart {
     position: absolute;
-    bottom: -20px;
+    top: -20px;
     transform: rotate(-45deg);
 }
 
-.floating-heart::before,
-.floating-heart::after {
+.floating-heart:before,
+.floating-heart:after {
     content: "";
     position: absolute;
     width: 100%;
@@ -89,16 +106,18 @@ body {
     border-radius: 50%;
 }
 
-.floating-heart::before { top: -50%; }
-.floating-heart::after { right: -50%; }
+.floating-heart:before {
+    top: -50%;
+    left: 0;
+}
+
+.floating-heart:after {
+    top: 0;
+    right: -50%;
+}
 
 @keyframes love {
     0% {
-        bottom: -20px;
-        opacity: 1;
-    }
-    100% {
-        bottom: 110%;
-        opacity: 0;
+        top: 110%;
     }
 }
